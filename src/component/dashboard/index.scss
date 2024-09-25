@@ -1,0 +1,91 @@
+@import url(../../assets/scss/variables.scss);
+.dashboard-wrapper {
+  height: calc(100vh - 95px);
+  overflow-y: auto;
+}
+.table-wrapper {
+  padding: 20px;
+  overflow-x: scroll;
+  table {
+    width: 100%;
+    border: 1px solid #a09b9b;
+    thead {
+      tr {
+        th {
+          padding: 5px;
+          font-size: 13px;
+          font-weight: 600;
+          background-color: #1b5242;
+          min-width: 80px;
+          color: #ffffff;
+          &:nth-child(even) {
+            background-color: #113a2e;
+          }
+          &:first-child {
+            background-color: #ffffff;
+            border: 1px solid #042870;
+            width: 100px;
+          }
+          &:last-child {
+            background-color: #ffffff;
+            border: 1px solid #042870;
+            min-width: 100px;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 8px;
+          font-size: 13px;
+          text-align: center;
+          border-left: 1px solid #a09b9b;
+          border-right: 1px solid #a09b9b;
+          border-bottom: 1px solid #a09b9b;
+          &:first-child {
+            border: 0px;
+            border-top: 1px solid #a09b9b;
+            border-bottom: 1px solid #a09b9b;
+          }
+        }
+        .color-shap-wrapp {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 600;
+          .color-shap {
+            width: 12px;
+            height: 12px;
+            display: block;
+          }
+        }
+        &.month-row {
+          td {
+            background-color: #1b5242;
+            color: #ffffff;
+            border: 0px;
+            &:first-child {
+              background-color: #ffffff;
+            }
+            &:nth-child(even) {
+              background-color: #113a2e;
+            }
+          }
+        }
+        &.graph-row {
+          td {
+            border-right: 1px solid #a09b9b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.arrow-button {
+  padding: 0px;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
